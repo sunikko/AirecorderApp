@@ -67,7 +67,7 @@ const App = () => {
     sendMessageToWebview({
       type: 'onStopRecord',
       data: {
-        aduio: base64audio,
+        audio: base64audio,
         mimeType: 'audio/mp4',
         ext,
       },
