@@ -1,12 +1,18 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Local Server to Public URL
+#
 
-ngrok.com
+• Local Server to Public URL
+• ngrok.com
 
-# AirecorderApp
+• react-native-audio-recorder-player
+• https://github.com/hyochan/react-native-audio-recorder-player
 
-# React-native, ngrok,
+• react-native-permissions
+• https://github.com/zoontek/react-native-permissions
+
+• react-native-fs
+• https://github.com/itinance/react-native-fs
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
