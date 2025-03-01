@@ -1,0 +1,231 @@
+diff --git a/node_modules/react-native-vision-camera/android/build.gradle b/node_modules/react-native-vision-camera/android/build.gradle
+index 91e64d9..8094ea3 100644
+--- a/node_modules/react-native-vision-camera/android/build.gradle
++++ b/node_modules/react-native-vision-camera/android/build.gradle
+@@ -83,14 +83,12 @@ buildscript {
+     classpath 'de.undercouch:gradle-download-task:4.1.2'
+     // noinspection DifferentKotlinGradleVersion
+     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+-    classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+   }
+ }
+ 
+ apply plugin: 'com.android.library'
+ apply plugin: 'de.undercouch.download'
+ apply plugin: 'kotlin-android'
+-apply plugin: 'kotlin-android-extensions'
+ 
+ def getExtOrDefault(name) {
+   return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties['VisionCamera_' + name]
+diff --git a/node_modules/react-native-vision-camera/android/build/generated/source/buildConfig/debug/com/mrousavy/camera/BuildConfig.java b/node_modules/react-native-vision-camera/android/build/generated/source/buildConfig/debug/com/mrousavy/camera/BuildConfig.java
+new file mode 100644
+index 0000000..86a4dbf
+--- /dev/null
++++ b/node_modules/react-native-vision-camera/android/build/generated/source/buildConfig/debug/com/mrousavy/camera/BuildConfig.java
+@@ -0,0 +1,10 @@
++/**
++ * Automatically generated file. DO NOT MODIFY
++ */
++package com.mrousavy.camera;
++
++public final class BuildConfig {
++  public static final boolean DEBUG = Boolean.parseBoolean("true");
++  public static final String LIBRARY_PACKAGE_NAME = "com.mrousavy.camera";
++  public static final String BUILD_TYPE = "debug";
++}
+diff --git a/node_modules/react-native-vision-camera/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml b/node_modules/react-native-vision-camera/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml
+new file mode 100644
+index 0000000..090efb0
+--- /dev/null
++++ b/node_modules/react-native-vision-camera/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.mrousavy.camera" >
++
++    <uses-sdk android:minSdkVersion="21" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/react-native-vision-camera/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json b/node_modules/react-native-vision-camera/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json
+new file mode 100644
+index 0000000..72bb9f3
+--- /dev/null
++++ b/node_modules/react-native-vision-camera/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json
+@@ -0,0 +1,18 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "AAPT_FRIENDLY_MERGED_MANIFESTS",
++    "kind": "Directory"
++  },
++  "applicationId": "com.mrousavy.camera",
++  "variantName": "debug",
++  "elements": [
++    {
++      "type": "SINGLE",
++      "filters": [],
++      "attributes": [],
++      "outputFile": "AndroidManifest.xml"
++    }
++  ],
++  "elementType": "File"
++}
+\ No newline at end of file
+diff --git a/node_modules/react-native-vision-camera/android/build/intermediates/aar_metadata/debug/aar-metadata.properties b/node_modules/react-native-vision-camera/android/build/intermediates/aar_metadata/debug/aar-metadata.properties
+new file mode 100644
+index 0000000..776557e
+--- /dev/null
++++ b/node_modules/react-native-vision-camera/android/build/intermediates/aar_metadata/debug/aar-metadata.properties
+@@ -0,0 +1,5 @@
++aarFormatVersion=1.0
++aarMetadataVersion=1.0
++minCompileSdk=1
++minCompileSdkExtension=0
++minAndroidGradlePluginVersion=1.0.0
+diff --git a/node_modules/react-native-vision-camera/android/build/intermediates/annotation_processor_list/debug/annotationProcessors.json b/node_modules/react-native-vision-camera/android/build/intermediates/annotation_processor_list/debug/annotationProcessors.json
+new file mode 100644
+index 0000000..9e26dfe
+--- /dev/null
++++ b/node_modules/react-native-vision-camera/android/build/intermediates/annotation_processor_list/debug/annotationProcessors.json
+@@ -0,0 +1 @@
++{}
+\ No newline at end of file
+diff --git a/node_modules/react-native-vision-camera/android/build/intermediates/compile_r_class_jar/debug/R.jar b/node_modules/react-native-vision-camera/android/build/intermediates/compile_r_class_jar/debug/R.jar
+new file mode 100644
+index 0000000..d389895
+Binary files /dev/null and b/node_modules/react-native-vision-camera/android/build/intermediates/compile_r_class_jar/debug/R.jar differ
+diff --git a/node_modules/react-native-vision-camera/android/build/intermediates/compile_symbol_list/debug/R.txt b/node_modules/react-native-vision-camera/android/build/intermediates/compile_symbol_list/debug/R.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native-vision-camera/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties b/node_modules/react-native-vision-camera/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+new file mode 100644
+index 0000000..991962b
+--- /dev/null
++++ b/node_modules/react-native-vision-camera/android/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties
+@@ -0,0 +1 @@
++#Sat Mar 01 22:26:03 GMT 2025
+diff --git a/node_modules/react-native-vision-camera/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml b/node_modules/react-native-vision-camera/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml
+new file mode 100644
+index 0000000..7286534
+--- /dev/null
++++ b/node_modules/react-native-vision-camera/android/build/intermediates/incremental/debug/packageDebugResources/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/build/generated/res/resValues/debug"/></dataSet><mergedItems/></merger>
+\ No newline at end of file
+diff --git a/node_modules/react-native-vision-camera/android/build/intermediates/local_only_symbol_list/debug/R-def.txt b/node_modules/react-native-vision-camera/android/build/intermediates/local_only_symbol_list/debug/R-def.txt
+new file mode 100644
+index 0000000..78ac5b8
+--- /dev/null
++++ b/node_modules/react-native-vision-camera/android/build/intermediates/local_only_symbol_list/debug/R-def.txt
+@@ -0,0 +1,2 @@
++R_DEF: Internal format may change without notice
++local
+diff --git a/node_modules/react-native-vision-camera/android/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt b/node_modules/react-native-vision-camera/android/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
+new file mode 100644
+index 0000000..6d32fd8
+--- /dev/null
++++ b/node_modules/react-native-vision-camera/android/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
+@@ -0,0 +1,7 @@
++1<?xml version="1.0" encoding="utf-8"?>
++2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++3    package="com.mrousavy.camera" >
++4
++5    <uses-sdk android:minSdkVersion="21" />
++6
++7</manifest>
+diff --git a/node_modules/react-native-vision-camera/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml b/node_modules/react-native-vision-camera/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+new file mode 100644
+index 0000000..090efb0
+--- /dev/null
++++ b/node_modules/react-native-vision-camera/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.mrousavy.camera" >
++
++    <uses-sdk android:minSdkVersion="21" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/react-native-vision-camera/android/build/intermediates/navigation_json/debug/navigation.json b/node_modules/react-native-vision-camera/android/build/intermediates/navigation_json/debug/navigation.json
+new file mode 100644
+index 0000000..0637a08
+--- /dev/null
++++ b/node_modules/react-native-vision-camera/android/build/intermediates/navigation_json/debug/navigation.json
+@@ -0,0 +1 @@
++[]
+\ No newline at end of file
+diff --git a/node_modules/react-native-vision-camera/android/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt b/node_modules/react-native-vision-camera/android/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt
+new file mode 100644
+index 0000000..4f75aa2
+--- /dev/null
++++ b/node_modules/react-native-vision-camera/android/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt
+@@ -0,0 +1 @@
++com.mrousavy.camera
+diff --git a/node_modules/react-native-vision-camera/android/build/kotlin/compileDebugKotlin/cacheable/dirty-sources.txt b/node_modules/react-native-vision-camera/android/build/kotlin/compileDebugKotlin/cacheable/dirty-sources.txt
+new file mode 100644
+index 0000000..312dff1
+--- /dev/null
++++ b/node_modules/react-native-vision-camera/android/build/kotlin/compileDebugKotlin/cacheable/dirty-sources.txt
+@@ -0,0 +1,31 @@
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/parsers/ImageFormat+String.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/CameraView+TakeSnapshot.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/CameraView+Events.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/CameraView+Focus.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/CameraView.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/ImageProxy+save.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/Errors.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/frameprocessor/FrameProcessorRuntimeManager.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/frameprocessor/FrameProcessorPerformanceDataCollector.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/ImageProxy+isRaw.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/Size+rotated.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/CameraCharacteristicsUtils.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/CameraPackage.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/ViewGroup+installHierarchyFitter.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/withPromise.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/CameraView+TakePhoto.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/WritableArray+Nullables.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/CallbackPromise.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/Context+displayRotation.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/WritableMap+Nullables.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/AspectRatio.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/CameraSelector+byID.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/DeviceFormat.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/CameraViewManager.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/CameraView+RecordVideo.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/ImageCapture+suspendables.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/CameraViewModule.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/parsers/LenseFacing+String.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/ExifInterface+buildMetadataMap.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/parsers/Size+easy.kt
++/Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/java/com/mrousavy/camera/utils/List+containsAny.kt
+\ No newline at end of file
+diff --git a/node_modules/react-native-vision-camera/android/build/kotlin/compileDebugKotlin/local-state/build-history.bin b/node_modules/react-native-vision-camera/android/build/kotlin/compileDebugKotlin/local-state/build-history.bin
+new file mode 100644
+index 0000000..6502326
+Binary files /dev/null and b/node_modules/react-native-vision-camera/android/build/kotlin/compileDebugKotlin/local-state/build-history.bin differ
+diff --git a/node_modules/react-native-vision-camera/android/build/outputs/logs/manifest-merger-debug-report.txt b/node_modules/react-native-vision-camera/android/build/outputs/logs/manifest-merger-debug-report.txt
+new file mode 100644
+index 0000000..944eb0d
+--- /dev/null
++++ b/node_modules/react-native-vision-camera/android/build/outputs/logs/manifest-merger-debug-report.txt
+@@ -0,0 +1,17 @@
++-- Merging decision tree log ---
++manifest
++ADDED from /Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/AndroidManifest.xml:1:1-4:12
++INJECTED from /Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/AndroidManifest.xml:1:1-4:12
++	package
++		ADDED from /Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/AndroidManifest.xml:2:11-40
++		INJECTED from /Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/AndroidManifest.xml
++	xmlns:android
++		ADDED from /Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/AndroidManifest.xml:1:11-69
++uses-sdk
++INJECTED from /Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
++INJECTED from /Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/AndroidManifest.xml
++INJECTED from /Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/AndroidManifest.xml
++	android:targetSdkVersion
++		INJECTED from /Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/AndroidManifest.xml
++	android:minSdkVersion
++		INJECTED from /Users/soyeonwon/Projects/React_Native/RecorderApp/node_modules/react-native-vision-camera/android/src/main/AndroidManifest.xml
